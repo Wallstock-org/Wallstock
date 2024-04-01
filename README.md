@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WallStock
+
+WallStock is a comprehensive library of stock market widgets and advanced charting tools designed to enhance your investment experience. Whether you're a seasoned trader or a curious beginner, WallStock offers the resources you need to stay informed and make informed decisions.
+
+## Key Features
+
+### Wide Variety of Widgets
+
+Access a diverse selection of stock market widgets that seamlessly integrate with your website or dashboard. Track real-time quotes, company news, and market performance all in one place.
+
+### Interactive Charts
+
+Dive deeper into market trends with our powerful and user-friendly charting tools. Analyze historical data, identify patterns, and make insightful predictions with a variety of technical indicators and drawing tools.
+
+### Customization Options
+
+Tailor your experience by customizing widget layouts, chart styles, and data feeds. Choose from a range of color palettes and configurations to match your personal preferences.
+
+### Easy Integration
+
+Our widgets are designed for effortless integration with your website or platform. Simply copy and paste a few lines of code to start displaying dynamic stock market data.
+
+## Integration
+
+To integrate WallStock into your website or platform, simply add the following line of code:
+
+```html
+<script src="https://www.wallstock.com/widget.js"></script>
+```
 
 ## Getting Started
 
-First, run the development server:
+To get started with WallStock, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Visit [WallStock](https://www.wallstock.com) to explore our library of widgets and charting tools.
+2. Choose the widgets and charting tools that best suit your needs.
+3. Customize the widgets and charts according to your preferences.
+4. Integrate the widgets and charts into your website or platform using the provided code snippet.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Support
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any inquiries or assistance, please contact us at support@wallstock.com. We're here to help!

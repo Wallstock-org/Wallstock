@@ -16,16 +16,18 @@ datasource db {
 // Define your own models here and run `prisma generate` to create the Prisma Client
 
 model User {
-  id            String    @id @default(auto()) @map("_id") @db.ObjectId
-  name          String?
-  bio           String?
-  email         String    @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  accounts      Account[]
-  sessions      Session[]
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  bio            String?
+  email          String    @unique
+  hashedPassword String?
+  salt           String?
+  emailVerified  DateTime?
+  image          String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  accounts       Account[]
+  sessions       Session[]
 }
 
 model Account {

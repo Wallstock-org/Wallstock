@@ -17,6 +17,7 @@ export default auth((req) => {
   const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
   const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
+  const isLogoutRoute = nextUrl.pathname === "/auth/logout";
 
   if (isApiAuthRoute) {
     return;
@@ -35,6 +36,9 @@ export default auth((req) => {
       callbackUrl += nextUrl.search;
     }
 
+    if (isLogoutRoute) {
+      return Response.redirect(new URL(`/auth?callbackUrl=%2F`, nextUrl));
+    }
     const encodedCallbackUrl = encodeURIComponent(callbackUrl);
 
     return Response.redirect(

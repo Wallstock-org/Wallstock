@@ -32,7 +32,7 @@ To integrate WallStock into your website or platform, simply add the following l
 
 To get started with WallStock, follow these steps:
 
-1. Visit [WallStock](wallstock.vercel.app) to explore our library of widgets and charting tools.
+1. Visit [WallStock](https://wallstock.vercel.app) to explore our library of widgets and charting tools.
 2. Choose the widgets and charting tools that best suit your needs.
 3. Customize the widgets and charts according to your preferences.
 4. Integrate the widgets and charts into your website or platform using the provided code snippet.

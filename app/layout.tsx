@@ -4,7 +4,8 @@ import "./globals.css";
 import AuthProvider from "@/providers/auth-provider";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/toaster";
-
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "@/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,11 +29,14 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <AuthProvider session={session}>
-          <Toaster />
-          {children}
-          {modal}
-        </AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <AuthProvider session={session}>
+            <Toaster />
+            {children}
+            {modal}
+          </AuthProvider>
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "@/providers/auth-provider";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/providers/theme-provider";
-const inter = Inter({ subsets: ["latin"] });
+
+const fonts = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -28,15 +29,20 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <AuthProvider session={session}>
+      <body className={fonts.className}>
+        <AuthProvider session={session}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
             <Toaster />
             {children}
             {modal}
-          </AuthProvider>
-          <Analytics />
-        </ThemeProvider>
+          </ThemeProvider>
+        </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );

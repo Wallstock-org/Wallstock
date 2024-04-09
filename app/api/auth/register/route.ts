@@ -1,6 +1,5 @@
 import prisma from "@/lib/prisma";
 import { generateSalt, hashPassword } from "@/lib/utils";
-
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -27,15 +26,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const salt = generateSalt(16);
-    const hashedPassword = hashPassword(password, salt);
+    const hashedPassword = hashPassword(password);
 
     const newUser = await prisma.user.create({
       data: {
         name,
         email,
         hashedPassword,
-        salt,
       },
     });
 

@@ -3,6 +3,7 @@ import Google from "next-auth/providers/google";
 import Github from "next-auth/providers/github";
 import { type NextAuthConfig } from "next-auth";
 import prisma from "./lib/prisma";
+import bcryptjs from "bcryptjs";
 import { hashPassword } from "./lib/utils";
 import { AuthSchema } from "./lib/schema";
 import {
@@ -35,9 +36,9 @@ export default {
 
           if (!user || !user.hashedPassword) throw new UserNotFoundError();
 
-          const passwordsMatch = hashPassword(
-            password, // remind to convert to string
-            user.salt!
+          const passwordsMatch = bcryptjs.compareSync(
+            password,
+            user.hashedPassword
           );
 
           if (!passwordsMatch) throw new IncorrectPasswordError();

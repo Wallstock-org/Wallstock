@@ -25,7 +25,7 @@ Our widgets are designed for effortless integration with your website or platfor
 To integrate WallStock into your website or platform, simply add the following line of code:
 
 ```html
-<script src="https://www.wallstock.com/widget.js"></script>
+<script src="https://www.wallstock.vercel.app/widget.js"></script>
 ```
 
 ## Getting Started
@@ -43,4 +43,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For any inquiries or assistance, please contact us at support@wallstock.com. We're here to help!
+For any inquiries or assistance, please contact us at email. We're here to help!
